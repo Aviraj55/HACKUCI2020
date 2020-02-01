@@ -5,13 +5,14 @@
 .form-button {
   width: 80px;
   height: 35px;
+  text-decoration: solid;
 }
 
 .signup-box {
   margin: auto;
   width: 325px;
   background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.3);
+  border: 0px solid rgba(255,255,255,0.3);
   border-radius: 10px;
 }
 .display-box {
@@ -44,4 +45,34 @@
   box-shadow: 0 4px 80px #070509;
   padding: 2rem;
   border-radius: 16px;
+}
+.is-primary {
+  color: black;
+}
+
+button.is-primary.is-inverted.is-outlined:focus, .button.is-primary.is-inverted.is-outlined:hover {
+  background-color: #fff;
+  color: black;
+}
+
+.input.is-success, .textarea.is-success {
+  border-color: black;
+}
+.button.is-primary.is-inverted.is-outlined {
+  background-color: transparent;
+  border-color: black;
+  color: black;
+}
+body {
+  background-image: url(/static/food.jpg);
+  height: 100vh;
+  background-size: cover;
+  background-position: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+  font-weight: bold;
 }
