@@ -18,4 +18,4 @@
 Outermost level
 Hashed ID : Recipe Attributes (dict)
 
-Recipe Attributes (dict) -> {"title" : str, "ingredients": [str], "instructions" : str}
+Recipe Attributes (dict) -> {"title" : str, "ingredients": [str], "instructions" : str, "picture_link" : str}
