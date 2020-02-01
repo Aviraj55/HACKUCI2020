@@ -5,13 +5,14 @@
 .form-button {
   width: 80px;
   height: 35px;
+  text-decoration: solid;
 }
 
 .signup-box {
   margin: auto;
   width: 325px;
   background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.3);
+  border: 0px solid rgba(255,255,255,0.3);
   border-radius: 10px;
 }
 
@@ -26,4 +27,13 @@
 
 .settings-area {
   padding: 30px;
+}
+
+.is-primary {
+  color: black;
+}
+
+button.is-primary.is-inverted.is-outlined:focus, .button.is-primary.is-inverted.is-outlined:hover {
+  background-color: #fff;
+  color: black;
 }
