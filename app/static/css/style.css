@@ -21,6 +21,8 @@
   background: rgba(255,255,255,0.05);
   border: 1px solid rgba(255,255,255,0.3);
   border-radius: 10px;
+  background-color: rgba(100,100,100,0.75);
+  text-align: left;
 }
 .settings-box {
   margin: auto;
@@ -38,7 +40,7 @@
 .commentlist .comment-wrap, .comment ul .comment-wrap {
   position: relative;
   display: grid;
-  grid-template-columns: 80px minmax(100px,1fr) 160px;
+  grid-template-columns: 2fr 5fr 2fr;
   grid-gap: 2rem;
   background: #17141d;
   color: #c2c2c2;
@@ -68,6 +70,7 @@ body {
   height: 100vh;
   background-size: cover;
   background-position: right;
+  background-attachment: fixed;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -76,6 +79,7 @@ body {
   padding: 0 20px;
   font-weight: bold;
 }
+
 .button {
   -moz-appearance: none;
   -webkit-appearance: none;
@@ -122,4 +126,25 @@ body {
   background-color: rgba(255,255,255,0.5);
   border-color: black;
   color: #363636;
+}
+
+.rrr {
+  text-align: left;
+}
+
+.rbody {
+  background-image: url(/static/food.jpg);
+  height: 100vh;
+  background-size: cover;
+  background-position: right;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: center;
+  padding: 0 20px;
+  font-weight: bold;
+  margin: 0;
+  height: 100%;
 }

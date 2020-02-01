@@ -1,30 +1,50 @@
-{% extends "base.html" %}
-{% block body %}
-<!-- {% include "navbar.html" %} -->
-<div class="">
-  <div class="">
-    <div class="row is-auto">
-      <form method="GET" action="" id="display-box" class="display-box">
-        <ol class="commentlist" id="commentlist">
-            <li class="commentdepth-1">
-            <div class="comment-wrap">
-            <div class="comment-body">
-            <div class="comment-author-wrap vcard">
-                <h1>Recipe</h1>
-            <div class="comment-content article-content">
-            
-            <p>STEPS TO MAKE</p>
-            <p>MORE INFO</p> 
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+  </head>
+  <body class="rbody">
+   
+          <div class="row">
+            <div method="GET" action="" id="" class="">
+                {%for key in recipes%} 
+              <ol class="display-box" style="list-style-type:none">
+                  
+                  <li class="commentdepth-1">
+                  
+                  <div class="comment-body">
+                  <div class="">
+                      <h1>{{recipes[key]['title']}}</h1>
+                  <div class="">
+                  
+                  <p>Ingredients</p>
+                  <o1 class=''>
+                  {%for ing in recipes[key]['ingredients']%} 
+                  <li>{{ing}}</li> 
+                  {%endfor%} 
+              </o1>
+                  </div>
+                  </div>
+                  <div class="reply">
+                  <a rel="nofollow" class="button comment-reply-link" href='/'>Open Recipe</a> </div>
+                  
+                  </div>
+                  
+                  </ol>
+                  {%endfor%} 
             </div>
-            </div>
-            <div class="comment-actions">
-            <div class="reply">
-            <a rel="nofollow" class="button comment-reply-link" href='/'>Open Recipe</a> </div>
-            </div>
-            </div>
-            </ol>
-      </div>
-    </div>
-  </div>
-</section>
-{% endblock %}
+          </div>
+      </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    {% block scripts %}{% endblock %}
+      </body>
+</html>
+
+
+
