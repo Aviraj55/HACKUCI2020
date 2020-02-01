@@ -14,7 +14,13 @@
   border: 1px solid rgba(255,255,255,0.3);
   border-radius: 10px;
 }
-
+.display-box {
+  margin: auto;
+  width: auto;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 10px;
+}
 .settings-box {
   margin: auto;
   width: 325px;
@@ -26,4 +32,16 @@
 
 .settings-area {
   padding: 30px;
+}
+
+.commentlist .comment-wrap, .comment ul .comment-wrap {
+  position: relative;
+  display: grid;
+  grid-template-columns: 80px minmax(100px,1fr) 160px;
+  grid-gap: 2rem;
+  background: #17141d;
+  color: #c2c2c2;
+  box-shadow: 0 4px 80px #070509;
+  padding: 2rem;
+  border-radius: 16px;
 }

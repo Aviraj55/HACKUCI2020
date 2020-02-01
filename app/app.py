@@ -33,6 +33,7 @@ def home():
     #     return render_template('login.html', form=form)
     # user = helpers.get_user()
     form = IngredientsForm()
+    # select = request.form.get('comp_select')
     print('form validate?', form.validate_on_submit())
     # if form.validate_on_submit():
     if request.method == 'POST':
