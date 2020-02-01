@@ -42,7 +42,20 @@ button.is-primary.is-inverted.is-outlined:focus, .button.is-primary.is-inverted.
   border-color: black;
 }
 .button.is-primary.is-inverted.is-outlined {
-  background-color: rgba(200,200,200,0.65);
-  border-color: #fff;
-  color: #fff;
+  background-color: transparent;
+  border-color: black;
+  color: black;
+}
+body {
+  background-image: url(/static/food.jpg);
+  height: 100vh;
+  background-size: cover;
+  background-position: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+  font-weight: bold;
 }
