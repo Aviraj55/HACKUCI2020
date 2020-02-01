@@ -1,6 +1,7 @@
 
-from scripts import forms
-from flask import Flask, redirect, url_for, render_template, request, session
+# from scripts import forms
+from flask import Flask, redirect, url_for, render_template, session, request
+from scripts.forms import IngredientsForm
 import json
 import sys
 import os
@@ -31,20 +32,20 @@ def home():
     #         return json.dumps({'status': 'Both fields required'})
     #     return render_template('login.html', form=form)
     # user = helpers.get_user()
-    form = forms.IngredientsForm(request.form)
+    form = IngredientsForm()
+    print('form validate?', form.validate_on_submit())
+    # if form.validate_on_submit():
     if request.method == 'POST':
-        ingredient = request.form['ingredient']
-        if form.validate():
-            return json.dumps({'status': 'Successful'})
-        else:
-            return json.dumps({'status': 'Invalid'})
+        ingredient = form.ingredient.data
+        time = form.time.data
+        session['ingredients_list'] = ingredient.split(' ')
+        return redirect(url_for('results'))
     return render_template('home.html', form=form)
 
 
-# @app.route("/logout")
-# def logout():
-#     session['logged_in'] = False
-#     return redirect(url_for('login'))
+@app.route("/results")
+def results():
+    return render_template('results.html')
 
 
 # -------- Signup ---------------------------------------------------------- #

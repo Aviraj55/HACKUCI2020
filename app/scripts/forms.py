@@ -1,7 +1,10 @@
 # -*- coding: utf-8 -*-
-from wtforms import Form, StringField, validators
+from flask_wtf import FlaskForm
+from wtforms import StringField, IntegerField, SubmitField, validators
+from wtforms.validators import NumberRange
 
-
-class IngredientsForm(Form):
-    ingredient = StringField('Ingredient:', validators=[validators.required(), validators.Length(min=1, max=30)])
+class IngredientsForm(FlaskForm):
+    ingredient = StringField('Ingredient:', validators=[validators.required()])
+    time = IntegerField('Cooking Time: ', validators=[validators.required()])
+    add = SubmitField('Add')
     
