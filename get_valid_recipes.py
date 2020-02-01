@@ -10,7 +10,7 @@ def get_valid_recipes(ingredients: list, recipes : dict):
                         for ingredient_string in value: #iterates through each string within the value list
                             if ingredient in ingredient_string:
                                 sum += 1
-                                if sum >= .7 * len(value):      #we determined 70% of the ingredients must be covered by the items the user
+                                if sum >= .7 * len(value):      #we determined 70% of the ingredients must be covered by the items the user has
                                     valid_recipies[recipe] = recipe_dict
     
     return valid_recipies
