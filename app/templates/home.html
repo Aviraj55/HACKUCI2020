@@ -1,48 +1,47 @@
 {% extends "base.html" %}
 {% block body %}
-
-
-
-{% include "navbar.html" %}
+<!-- {% include "navbar.html" %} -->
 <section class="hero is-primary is-bold is-large">
   <div class="hero-body">
     <div class="column is-auto">
-      <div id="signup-box" class="signup-box">
-        <div class="signup-area">
-          <h1 class="title">What stuff, seperated by commas</h1>
+      <form method="POST" action="" id="signup-box" class="signup-box">
+        <formset>
+          <h1 class="title">Enter Ingredients</h1>
           <div class="field">
             <p class="control has-icons-left has-icons-right">
-              <input id="signup-user" class="input is-success" type="text" placeholder="Ingredients">
-              <span class="icon is-small is-left">
-                <i class="fa fa-user"></i>
-              </span>
-              <span class="icon is-small is-right">
-                <i class="fa fa-check"></i>
-              </span>
+              {% if form.ingredient.errors %}
+              {{ form.ingredient(class="input is-invalid") }}
+              <!-- <div class="invalid-feedback">
+                  {% for error in form.ingredient.errors %}
+                  <span>{{ error }}</span>
+                  {% endfor %}
+              </div> -->
+              {% else %}
+              {{ form.ingredient(class="input is-success") }}
+              {% endif %}
             </p>
           </div>
           <div class="field">
             <p class="control has-icons-left has-icons-right">
-              <input id="signup-mail" class="input is-success" type="text" placeholder="time">
-              <span class="icon is-small is-left">
-                <i class="fa fa-envelope"></i>
-              </span>
-              <span class="icon is-small is-right">
-                <i class="fa fa-check"></i>
-              </span>
+              {% if form.time.errors %}
+              {{ form.time(class="input is-invalid") }}
+              <!-- <div class="invalid-feedback">
+                  {% for error in form.time.errors %}
+                  <span>{{ error }}</span>
+                  {% endfor %}
+              </div> -->
+              {% else %}
+              {{ form.time(class="input is-success") }}
+              {% endif %}
             </p>
           </div>
           <br>
-          <a id="signup-button" class="form-button button is-primary is-inverted is-outlined">Add</a>
-          <br>
-          <br>
-          <i><a id="feedback" class="feedback"></a></i>
-        </div>
+          <div class="form-group">
+            {{ form.add(class="form-button button is-primary is-inverted is-outlined") }}
+          </div>
+        </formset>
       </div>
     </div>
-
-
-
   </div>
 </section>
 {% endblock %}
