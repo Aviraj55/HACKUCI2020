@@ -37,3 +37,7 @@ button.is-primary.is-inverted.is-outlined:focus, .button.is-primary.is-inverted.
   background-color: #fff;
   color: black;
 }
+
+.input.is-success, .textarea.is-success {
+  border-color: black;
+}
