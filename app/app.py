@@ -106,6 +106,7 @@ example = {
 @app.route("/results")
 def results():
     plain_json = get_all_valid_recipes(INGREDIENTS_LIST)
+    clean_ads(plain_json)
     #clean_ads(plain_json)
     #clean_ads(example)
     #print(type(example))
