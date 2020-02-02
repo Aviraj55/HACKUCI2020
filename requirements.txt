@@ -1,0 +1,6 @@
+Flask
+WTForms
+requests
+flask-heroku
+gunicorn
+flask_wtf
