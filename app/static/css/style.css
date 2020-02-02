@@ -24,18 +24,6 @@
   background-color: rgba(100,100,100,0.75);
   text-align: left;
 }
-.settings-box {
-  margin: auto;
-  width: 325px;
-}
-
-.signup-area {
-  padding: 30px;
-}
-
-.settings-area {
-  padding: 30px;
-}
 
 .commentlist .comment-wrap, .comment ul .comment-wrap {
   position: relative;
@@ -71,7 +59,7 @@ body {
   background-size: cover;
   background-position: right;
   background-attachment: fixed;
-  display: flex;
+  display: grid;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -81,8 +69,6 @@ body {
 }
 
 .button {
-  -moz-appearance: none;
-  -webkit-appearance: none;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -105,11 +91,6 @@ body {
   padding-top: calc(.375em - 1px);
   position: relative;
   vertical-align: top;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
   background-color: transparent;
   border-color: black;
   color: black;
@@ -128,9 +109,6 @@ body {
   color: #363636;
 }
 
-.rrr {
-  text-align: left;
-}
 
 .rbody {
   background-image: url(/static/food.jpg);
@@ -138,13 +116,26 @@ body {
   background-size: cover;
   background-position: right;
   background-attachment: fixed;
-  display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
-  text-align: center;
   padding: 0 20px;
   font-weight: bold;
   margin: 0;
   height: 100%;
+  color: black
+}
+.ingredients {
+  text-decoration: none;
+  font-size: small;
+  color: none
+}
+
+.row {
+  display: grid;
+  text-align: center;
+  background-color: rgba(255,255,255,0.5);
+}
+.comment-body {
+  display: inline-block;
+  justify-content: center;
 }
