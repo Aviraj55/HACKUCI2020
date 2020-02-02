@@ -20,21 +20,7 @@
               {% endif %}
             </p>
           </div>
-          <h4 class="">Max Prep Time</h4>
-          <div class="field">
-            <p class="control has-icons-left has-icons-right">
-              {% if form.time.errors %}
-              {{ form.time(class="input is-invalid") }}
-              <!-- <div class="invalid-feedback">
-                  {% for error in form.time.errors %}
-                  <span>{{ error }}</span>
-                  {% endfor %}
-              </div> -->
-              {% else %}
-              {{ form.time(class="input is-success") }}
-              {% endif %}
-            </p>
-          </div>
+      
           <br>
           <div class="form-group">
             {{ form.add(class="form-button button ") }}

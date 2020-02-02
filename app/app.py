@@ -26,7 +26,7 @@ def home():
     # if form.validate_on_submit():
     if request.method == 'POST':
         ingredient = form.ingredient.data
-        time = form.time.data
+        # time = form.time.data
         session['ingredients_list'] = ingredient.split(' ')
         global INGREDIENTS_LIST
         INGREDIENTS_LIST = session['ingredients_list']
