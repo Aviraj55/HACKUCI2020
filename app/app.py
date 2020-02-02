@@ -41,7 +41,7 @@ def results():
     #clean_ads(example)
     #print(type(example))
     #print(type(plain_json))
-    if len(INGREDIENTS_LIST) < 7:
+    if len(INGREDIENTS_LIST) < 5:
         return render_template('error.html')
     return render_template('results.html', recipes=plain_json)
 
